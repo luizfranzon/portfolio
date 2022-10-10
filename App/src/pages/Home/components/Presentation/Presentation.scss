@@ -1,0 +1,116 @@
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .home-left {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        span {
+            display: flex;
+            align-items: flex-end;
+            gap: 14px;
+        }
+
+        span img {
+            animation: waving-hand 2.3s infinite;
+            transform-origin: 80% 80%;
+        }
+
+        h1 {
+            font-family: "Kanit", sans-serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+
+            background: linear-gradient(180deg, #1979e8 0%, #0b92df 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            text-shadow: 0px 0px 8px #197ae8c2;
+        }
+
+        span,
+        h2 {
+            font-family: "Sora", sans-serif;
+            font-size: 2.375rem;
+            font-weight: 500;
+        }
+
+        .button-box {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+
+            button:first-child {
+                width: 90%;
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 600;
+                gap: 12px;
+
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+
+            button {
+                font-family: "Kanit", sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border: none;
+                height: 80px;
+                width: 80px;
+                border-radius: 8px;
+                width: 25%;
+                background: linear-gradient(90deg, #00489b 0%, #099ef3 100%);
+                transition: transform 0.1s;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@keyframes waving-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

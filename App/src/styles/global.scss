@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #F2F2F2;
+}
+
+::selection {
+    color: #469df5;
+    background-color: #1480ed73;
+}
