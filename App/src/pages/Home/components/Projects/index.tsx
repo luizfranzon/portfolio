@@ -1,7 +1,9 @@
+import "./Projects.scss";
+
 export function Projects() {
     return (
-        <div>
-            <h1>Projects</h1>
+        <div className="projects">
+            <h1 id="#projects">🚧Em construção!🚧</h1>
         </div>
     );
 }

@@ -6,3 +6,16 @@
 
     background-color: #080c14;
 }
+
+.blueLine {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(90deg, #00489B 0%, #099EF3 100%);
+}
+
+.projectsSection {
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+
+}
