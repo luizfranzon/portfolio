@@ -1,3 +1,6 @@
+import { useRef, useEffect } from "react";
+import Typed from "typed.js";
+
 import { CaretDoubleRight } from "phosphor-react";
 
 import handEmoji from "../../../../assets/handEmoji.svg";
@@ -8,31 +11,55 @@ import githubIcon from "../../../../assets/githubIcon.svg";
 import "./Presentation.scss";
 
 export function Presentation() {
+    const el = useRef(null);
+
+    useEffect(() => {
+        const typed = new Typed(el.current!, {
+            strings: ["Desenvolvedor Front-end."],
+            startDelay: 1000,
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 10,
+        });
+
+        return () => {
+            typed.destroy();
+        };
+    }, []);
+
     return (
-        <section className="presentation">
+        <div className="presentation">
             <div className="home-left">
                 <span>
                     Olá! <img src={handEmoji} alt="" />
                 </span>
                 <span>Meu nome é:</span>
                 <h1>Luiz Fernando.</h1>
-                <h2>Desenvolvedor Front-end|</h2>
+                <div className="typingText">
+                    <h2 ref={el}>Desenvolvedor Front-end</h2>
+                </div>
                 <div className="button-box">
-                    <button onClick={() => (window.location.href = "")}>
+                    <button
+                        onClick={() => (window.location.href = "#projects")}
+                    >
                         Projetos <CaretDoubleRight size={52} weight="bold" />
                     </button>
                     <button
                         onClick={() =>
-                            (window.location.href =
-                                "https://www.linkedin.com/in/luizffranzon/")
+                            window.open(
+                                "https://www.linkedin.com/in/luizffranzon/",
+                                "_blank"
+                            )
                         }
                     >
                         <img src={linkedinIcon} alt="" />
                     </button>
                     <button
                         onClick={() =>
-                            (window.location.href =
-                                "https://github.com/luizfranzon")
+                            window.open(
+                                "https://github.com/luizfranzon",
+                                "_blank"
+                            )
                         }
                     >
                         <img src={githubIcon} alt="" />
@@ -40,6 +67,6 @@ export function Presentation() {
                 </div>
             </div>
             <img src={codingImage} alt="" />
-        </section>
+        </div>
     );
 }
