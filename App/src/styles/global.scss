@@ -4,12 +4,37 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
+    overflow: overlay;
 }
 
 ::selection {
     color: #469df5;
     background-color: #1480ed73;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-color: #469df5 #469df5;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #080c1400;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #1979e8 0%, #0b92df 100%);
+    border-radius: 8px;
 }
