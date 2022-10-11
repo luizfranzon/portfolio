@@ -1,0 +1,8 @@
+{
+    "routes": [
+        { "src": "/", "dest": "/" },
+        { "src": "/sobre", "dest": "/" },
+        { "src": "/conhecimentos", "dest": "/" },
+        { "src": "/contato", "dest": "/" }
+    ]
+}
