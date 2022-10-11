@@ -16,10 +16,8 @@ export function Presentation() {
     useEffect(() => {
         const typed = new Typed(el.current!, {
             strings: ["Desenvolvedor Front-end."],
-            startDelay: 1000,
+            startDelay: 800,
             typeSpeed: 80,
-            backSpeed: 80,
-            backDelay: 10,
         });
 
         return () => {
