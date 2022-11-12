@@ -38,3 +38,13 @@ body {
     background: linear-gradient(180deg, #1979e8 0%, #0b92df 100%);
     border-radius: 8px;
 }
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
